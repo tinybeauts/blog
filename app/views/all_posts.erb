@@ -1,0 +1,10 @@
+
+
+<div class="all_posts">
+  <p>Here are all the posts</p>
+  <ul>
+    <% @all_posts.each do |post| %>
+    <li><a href='/posts/<%= post.id %>'><%= post.title %></a></li>
+    <% end %>
+  </ul>
+</div>

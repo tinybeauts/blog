@@ -1,0 +1,14 @@
+
+
+<div class="container">
+	<p>Hello this is your post</p>
+	<p>The title is: <%=@post.title%></p>
+	<p>The body is: <%=@post.body%></p>
+	<p>These are the tags:
+		<ul class="tags">
+			<% @tags.each do |tag| %>
+			<li><%= tag.name %></li>
+			<% end %>
+		</ul>
+	</p>
+</div>

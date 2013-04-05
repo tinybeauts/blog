@@ -1,0 +1,14 @@
+<div class="tag_header">
+  <div class="tag_name">
+    <p>Hello this is the tag name: <%= @tag.name %></p>
+  </div>
+  <div class="posts_by_tag">
+    <p>These are all the posts with that tag</p>
+    <ul>
+      <% @tag.posts.each do |post| %>
+      <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

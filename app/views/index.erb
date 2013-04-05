@@ -1,23 +1,21 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+
+<div class="new_post_container">
+
+  <form action="/posts" method="post">
+    <p>Title</p>
+    <input type="text" name="post[title]">
+    <br/>
+    <p>Body</p>
+    <textarea cols="64" rows="8" name="post[body]"></textarea>
+    <br/>
+    <p>Tags</p>
+    <input type="text" name="tags[tag]">
+    <br/>
+    <br/>
+    <input type="submit" value="New Post">
+  </form>
+
 </div>
+
+

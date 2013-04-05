@@ -7,3 +7,43 @@
 th {
   text-align: left;
 }
+
+.new_post_container {
+	margin: 20px auto;
+	width: 600px;
+	height: 415px;
+	border: 1px solid red;
+}
+
+.nav {
+  border: 2px solid green;
+  margin: 20px auto;
+  width: 263px;
+  overflow: hidden;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid blue;
+  padding: 10px;
+  float: left;
+}
+
+.tag_container {
+  border: 2px solid red;
+  margin: 20px auto;
+  width: 600px;
+}
+
+.tag_container ul {
+  border: 2px solid yellow;
+  margin: 20px auto;
+  width: 600px;
+}
+
+.tag_container ul li {
+  border: 2px solid blue;
+  margin: 20px auto;
+  width: 200px;
+}
