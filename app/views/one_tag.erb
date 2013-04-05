@@ -1,12 +1,17 @@
 <div class="tag_header">
-  <div class="tag_name">
-    <p>Hello this is the tag name: <%= @tag.name %></p>
-  </div>
+  
+  <p>Hello this is the tag name: 
+    <span class="tag_name"><%= @tag.name %></span>
+  </p>
   <div class="posts_by_tag">
-    <p>These are all the posts with that tag</p>
+    <p>These are all the posts with that tag:</p>
     <ul>
-      <% @tag.posts.each do |post| %>
-      <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+      <% if @tag.posts.length > 0 %>
+        <% @tag.posts.each do |post| %>
+        <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+        <% end %>
+      <% else %>
+        <span class="empty_space">TITLE</span>
       <% end %>
     </ul>
   </div>

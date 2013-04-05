@@ -1,3 +1,7 @@
+* {
+  font-family: 'Arial Black', sans-serif;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -8,42 +12,243 @@ th {
   text-align: left;
 }
 
+/* NEW POST */
+
 .new_post_container {
 	margin: 20px auto;
 	width: 600px;
-	height: 415px;
-	border: 1px solid red;
+	border: 3px solid #E74C3C;
+  border-radius: 3px;
+  color: #7F8C8D;
+  padding: 0px 20px 20px;
 }
 
+.new_post_container .submit {
+  color: white;
+  background-color: #2C3E50;
+  border-radius: 3px;
+  border: 0px;
+  /*margin: 5px;*/
+}
+
+/*NAVIGATION */
+
 .nav {
-  border: 2px solid green;
   margin: 20px auto;
-  width: 263px;
+  width: 325px;
   overflow: hidden;
 }
 
 .nav a {
   text-decoration: none;
-  color: black;
-  border: 2px solid blue;
+  color: white;
   padding: 10px;
   float: left;
+  background-color: #3498DB;
+  border-radius: 3px;
+  margin-left: 5px;
 }
 
+/*ALL TAGS*/
+
 .tag_container {
-  border: 2px solid red;
   margin: 20px auto;
   width: 600px;
+}
+
+.tag_container p {
+  border: 3px solid #E74C3C;
+  border-radius: 3px;
+  line-height: 2.5em;
+  padding-left: 20px;
+  margin: 10px 0px 13px;
+  color: #7F8C8D;
 }
 
 .tag_container ul {
-  border: 2px solid yellow;
+  border: 3px solid #F1C40F;
+  border-radius: 10px;
+  float: left;
+  padding-left: 10px;
+  width: 585px;
+}
+
+.tag_container ul li {
+  background-color: #2FE2BF;
+  border-radius: 3px;
+  display: inline;
+  float: left;
+  padding: 5px 7px 7px;
+  margin: 5px;
+}
+
+.tag_container ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.tag_container ul li a:hover {
+  color: #ECF0F1;
+  padding: 3px;
+}
+
+/*POSTS BY TAG*/
+
+.tag_header {
   margin: 20px auto;
   width: 600px;
 }
 
-.tag_container ul li {
-  border: 2px solid blue;
+.tag_header p {
+  border: 3px solid #E74C3C;
+  border-radius: 3px;
+  line-height: 2.5em;
+  padding-left: 20px;
+  margin: 10px 0px 13px;
+  color: #7F8C8D;
+}
+
+.tag_header .tag_name {
+  background-color: #2FE2BF;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin: 5px;
+  color: white;
+}
+
+.posts_by_tag {
+  margin-top: 30px;
+}
+
+.posts_by_tag ul {
+  border: 3px solid #F1C40F;
+  border-radius: 10px;
+  float: left;
+  padding-left: 10px;
+  width: 585px;
+}
+
+.posts_by_tag ul li {
+  background-color: #D35400;
+  border-radius: 3px;
+  display: inline;
+  float: left;
+  padding: 5px 7px 7px;
+  margin: 5px;
+}
+
+.posts_by_tag ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.posts_by_tag ul li a:hover {
+  color: #ECF0F1;
+  padding: 3px;
+}
+
+/*ALL POSTS*/
+
+.all_posts {
   margin: 20px auto;
-  width: 200px;
+  width: 600px;
+}
+
+.all_posts p {
+  border: 3px solid #E74C3C;
+  border-radius: 3px;
+  line-height: 2.5em;
+  padding-left: 20px;
+  margin: 10px 0px 13px;
+  color: #7F8C8D;
+}
+
+.all_posts ul {
+  border: 3px solid #F1C40F;
+  border-radius: 10px;
+  float: left;
+  padding-left: 10px;
+  width: 585px;
+}
+
+.all_posts ul li {
+  background-color: #D35400;
+  border-radius: 3px;
+  display: inline;
+  float: left;
+  padding: 5px 7px 7px;
+  margin: 5px;
+}
+
+.all_posts ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.all_posts ul li a:hover {
+  color: #ECF0F1;
+  padding: 3px;
+}
+
+/*ONE POST*/
+
+.posts {
+  margin: 20px auto;
+  width: 600px;
+}
+
+.posts p {
+  border: 3px solid #E74C3C;
+  border-radius: 3px;
+  line-height: 2.5em;
+  padding-left: 20px;
+  margin: 30px 0px 13px;
+  color: #7F8C8D;
+}
+
+.posts .top_line {
+  margin-top: 10px;
+}
+
+.posts .post_title {
+  background-color: #D35400;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin: 5px;
+  color: white;
+}
+
+.posts .post_body {
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.posts ul {
+  border: 3px solid #F1C40F;
+  border-radius: 10px;
+  float: left;
+  padding-left: 10px;
+  width: 585px;
+}
+
+.posts ul li {
+  background-color: #2FE2BF;
+  border-radius: 3px;
+  display: inline;
+  float: left;
+  padding: 5px 7px 7px;
+  margin: 5px;
+}
+
+.posts ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.posts ul li a:hover {
+  color: #ECF0F1;
+  padding: 3px;
+}
+
+.empty_space {
+  color: white;
 }

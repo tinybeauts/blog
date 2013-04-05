@@ -1,14 +1,21 @@
 
 
-<div class="container">
-	<p>Hello this is your post</p>
-	<p>The title is: <%=@post.title%></p>
-	<p>The body is: <%=@post.body%></p>
-	<p>These are the tags:
-		<ul class="tags">
-			<% @tags.each do |tag| %>
-			<li><%= tag.name %></li>
-			<% end %>
+<div class="posts">
+	<p class="top_line">Hello this is your post</p>
+	<p>The title is: 
+    <span class="post_title"><%=@post.title%></span>
+  </p>
+	<p>The body is: <br/>
+    <span class="post_body"><%=@post.body%></span>
+  </p>
+	<p>These are the tags: </p>
+		<ul>
+      <% if @tags.length > 0 %>
+  			<% @tags.each do |tag| %>
+  			<li><a href='/tags/<%= tag.id %>'><%= tag.name %></a></li>
+  			<% end %>
+      <% else %>
+        <span class="empty_space">TAG</span>
+      <% end %>
 		</ul>
-	</p>
 </div>
