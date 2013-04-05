@@ -19,9 +19,10 @@
 </head>
 <body>
   <div class="nav">
+    <a href="/">New Post</a>
     <a href="/posts">All Posts</a>
     <a href="/tags">All Tags</a>
-    <a href="/">New Post</a>
+    <%= yield_content :foo %>
   </div>
   <%= yield %>
 </body>

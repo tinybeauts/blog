@@ -1,5 +1,4 @@
 
-
 <div class="posts">
 	<p class="top_line">Hello this is your post</p>
 	<p>The title is: 
@@ -8,6 +7,9 @@
 	<p>The body is: <br/>
     <span class="post_body"><%=@post.body%></span>
   </p>
+  <p>Create on: 
+    <span class="time"><%= @post.created_at.strftime("%d %b %Y") %></span>
+     by: </p>
 	<p>These are the tags: </p>
 		<ul>
       <% if @tags.length > 0 %>
@@ -19,3 +21,9 @@
       <% end %>
 		</ul>
 </div>
+
+
+<% content_for :foo do %>
+ <a href="/posts/<%= @post.id %>/edit">Edit</a>
+ <span class="delete_button"><%= delete_post_button(@post.id) %></span>
+<% end %>

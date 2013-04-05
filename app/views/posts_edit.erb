@@ -1,0 +1,23 @@
+<div class="post_container">
+
+  <form action="/posts/<%= @post.id %>" method="post">
+    <input type="hidden" name="_method" value="put" />
+
+    <p>Title:</p>
+    <input type="text" name="post[title]" value="<%= @post.title %>">
+    <br/>
+    <p>Body:</p>
+    <textarea cols="60" rows="8" name="post[body]"><%= @post.body %></textarea>
+    <br/>
+    <p>Tags:</p>
+    <input type="text" name="tags[tag]" value="<%= @post.tags_string %>">
+    <br/>
+    <br/>
+    <input type="submit" value="Save Post" class="submit">
+  </form>
+
+</div>
+
+<% content_for :foo do %>
+ <span class="delete_button"><%= delete_post_button(@post.id) %></span>
+<% end %>
