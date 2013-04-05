@@ -5,7 +5,7 @@ post '/posts' do
     @post.tags_string = params[:tags][:tag]
   	redirect to "/posts/#{@post.id}"
   else
-    erb :index
+    erb :post_fail, locals: { post: params[:post], tags: params[:tags][:tag]}
   end
 end
 
@@ -25,7 +25,7 @@ put '/posts/:id' do
   if @post.update_attributes(params[:post])
     redirect to "/posts/#{@post.id}"
   else
-    erb :posts_edit
+    erb :post_fail, locals: { id: params[:id], post: params[:post], tags: params[:tags][:tag] }
   end
 end
 

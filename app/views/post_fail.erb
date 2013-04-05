@@ -1,0 +1,34 @@
+
+
+<div class="post_container">
+
+  <form action="/posts" method="post">
+    <p>Title:</p>
+    <% if params[:post][:title].length > 0 %>
+    <input type="text" name="post[title]" value="<%= params[:post][:title] %>">
+    <% else %>    
+    <input type="text" name="post[title]" value="Please enter a title">
+    <% end %>
+    <br/>
+    <p>Body:</p>
+    <% if params[:post][:body].length > 3 %>
+    <textarea cols="60" rows="8" name="post[body]"><%= params[:post][:body]%></textarea>
+    <% else %>    
+    <textarea cols="60" rows="8" name="post[body]">Please enter a post greater than 3 characters.</textarea>
+    <% end %>
+    <br/>
+    <p>Tags:</p>
+    <input type="text" name="tags[tag]" value="<%= params[:tags][:tag]%>">
+    <br/>
+    <br/>
+    <% if params[:id].nil? %>
+    <input type="submit" value="New Post" class="submit">
+    <% else %>
+    <input type="submit" value="Save Post" class="submit">
+    <% end %>
+  </form>
+
+</div>
+
+
+
